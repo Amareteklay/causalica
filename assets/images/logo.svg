@@ -1,20 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
-<path d="M0 0 C337.92 0 675.84 0 1024 0 C1024 337.92 1024 675.84 1024 1024 C686.08 1024 348.16 1024 0 1024 C0 686.08 0 348.16 0 0 Z " fill="none" transform="translate(0,0)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Causalica logo">
+  <defs>
+    <!-- Reality stroke: slightly brighter navy gradient for better presence -->
+    <linearGradient id="cDepth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26445F"/>
+      <stop offset="1" stop-color="#14263A"/>
+    </linearGradient>
 
-<!-- C path adjusted - made bigger to embrace the circles -->
-<path d="M580 340C540 290 470 260 390 260C269 260 170 359 170 480C170 601 269 700 390 700C470 700 540 670 580 620" 
-      stroke="#372979" 
-      stroke-width="80" 
-      fill="none"
-      stroke-linecap="round" 
-      stroke-linejoin="round"/>
+    <!-- Counterfactual nodes: subtle premium depth (no glossy highlights) -->
+    <linearGradient id="nodeA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#57C7F6"/>
+    </linearGradient>
 
-<path d="M0 0 C15.41980496 12.67786938 26.59977398 30.80533958 29.43554688 50.78808594 C31.42977515 72.63052957 26.27743686 94.21345211 12.30273438 111.41308594 C-1.22714534 126.87580561 -18.57436112 138.73191366 -39.56445312 140.78808594 C-61.83960188 142.18063368 -81.60916096 137.44067164 -98.68945312 122.47558594 C-115.35539421 106.86779985 -125.75323045 88.65265701 -126.77929688 65.53808594 C-127.43133002 42.998431 -120.31273095 23.56456772 -104.79882812 7.06152344 C-104.06148437 6.31128906 -103.32414063 5.56105469 -102.56445312 4.78808594 C-101.95085938 4.16160156 -101.33726562 3.53511719 -100.70507812 2.88964844 C-73.54129301 -22.7650375 -28.94584299 -22.42309061 0 0 Z " fill="#23B7CA" transform="translate(662.564453125,320.2119140625)"/>
+    <linearGradient id="nodeB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#8E73F3"/>
+    </linearGradient>
 
-<path d="M0 0 C15.3009586 13.38276263 25.95362451 32.37452583 27.91162109 52.75830078 C28.64082328 64.51524837 27.3052271 75.16604832 23.6796875 86.34375 C23.37933594 87.27574219 23.07898438 88.20773437 22.76953125 89.16796875 C15.28364222 109.81087487 -1.51320694 124.06604077 -20.66796875 133.5 C-29.56942078 137.64459142 -37.85147801 139.85753492 -47.6953125 139.65625 C-48.61505859 139.64424561 -49.53480469 139.63224121 -50.48242188 139.61987305 C-72.38589145 139.165805 -91.79909416 130.8193177 -107.3203125 115.34375 C-123.01529378 97.77012702 -129.4333005 75.93570343 -128.49511719 52.74121094 C-126.93346728 31.32305153 -115.25503787 12.50028267 -99.30859375 -1.37109375 C-69.31092322 -24.31048886 -29.38212554 -23.25089609 0 0 Z " fill="#D61A82" transform="translate(664.3203125,564.65625)"/>
+    <!-- Universal contrast: a dual shadow (one dark, one light) -->
+    <filter id="universalContrast" x="-25%" y="-25%" width="150%" height="150%">
+      <!-- dark shadow for light backgrounds -->
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity="0.28"/>
+      <!-- light glow for dark backgrounds -->
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#FFFFFF" flood-opacity="0.14"/>
+    </filter>
 
-<path d="M0 0 C0.680625 0.556875 1.36125 1.11375 2.0625 1.6875 C0.71247261 4.38755479 -1.29511265 5.0871069 -3.87109375 6.4921875 C-6.01667638 7.73329957 -7.98331478 9.12254906 -10 10.5625 C-21.98848971 18.62302038 -34.8975706 22.09072971 -49.1875 22 C-50.10063965 21.99581055 -51.0137793 21.99162109 -51.95458984 21.98730469 C-59.61695299 21.86043096 -66.55958386 20.85747534 -73.9375 18.6875 C-74.86304688 18.43226563 -75.78859375 18.17703125 -76.7421875 17.9140625 C-86.83893141 14.72407674 -95.82784297 8.3696144 -103.9375 1.6875 C-73.86137913 -25.49668617 -31.08989422 -24.47502311 0 0 Z " fill="#E164A9" transform="translate(664.9375,565.3125)"/>
+    <!-- Node shadow kept softer than C -->
+    <filter id="nodeShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
 
-<path d="M0 0 C1.8125 1.36328125 1.8125 1.36328125 3 2.6875 C3 3.6775 3 4.6675 3 5.6875 C-5.81642521 13.82707367 -17.46735615 19.56105616 -29 22.6875 C-29.70769531 22.89246094 -30.41539062 23.09742188 -31.14453125 23.30859375 C-48.59179576 27.61839503 -69.27026828 24.94645689 -84.80859375 16.0859375 C-90.30089027 12.70262323 -95.23444303 9.02945191 -100 4.6875 C-93.11396291 -3.14833531 -83.7609141 -7.9972041 -74 -11.3125 C-73.03320312 -11.68503906 -72.06640625 -12.05757813 -71.0703125 -12.44140625 C-46.9122234 -20.75480142 -20.41312414 -14.41137813 0 0 Z " fill="#64C8D2" transform="translate(662,436.3125)"/>
+  <!-- C arc geometry (same as your improved positioning) -->
+  <!-- 1) Halo stroke (makes C visible on any background) -->
+  <path
+    d="M 676 322 A 280 280 0 1 0 676 702"
+    fill="none"
+    stroke="rgba(255,255,255,0.18)"
+    stroke-width="122"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#universalContrast)"
+  />
+
+  <!-- 2) Main reality stroke -->
+  <path
+    d="M 676 322 A 280 280 0 1 0 676 702"
+    fill="none"
+    stroke="url(#cDepth)"
+    stroke-width="92"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#universalContrast)"
+  />
+
+  <!-- Counterfactual nodes -->
+  <circle cx="730" cy="395" r="86" fill="url(#nodeA)" filter="url(#nodeShadow)"/>
+  <circle cx="730" cy="629" r="86" fill="url(#nodeB)" filter="url(#nodeShadow)"/>
 </svg>
