@@ -10,7 +10,7 @@ project:
 website:
   title: "Causalica"
   site-url: https://causalica.com
-  favicon: assets/images/logo.svg
+  favicon: assets/images/favicon.ico
 
   navbar:
     logo: assets/images/logo.svg
