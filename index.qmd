@@ -2,6 +2,7 @@
 title: "Causalica"
 ---
 
+```{=html}
 <div class="hero">
   <div class="kicker">Causal inference • decision science • research engineering</div>
   <h1 class="title">Causal inference for real decisions</h1>
@@ -10,14 +11,14 @@ title: "Causalica"
     workflows you can ship.
   </p>
 
-  ::: {.cta-row}
-[Read the textbook →](https://textbook.causalica.com){.btn .btn-primary .btn-lg}
-[Start here](start-here.qmd){.btn .btn-outline-light .btn-lg}
-[Explore writing](blog/index.qmd){.btn .btn-outline-light .btn-lg}
-[Work with me](work.qmd){.btn .btn-outline-light .btn-lg}
-:::
-
+  <div class="cta-row">
+    <a class="btnx primary" href="https://textbook.causalica.com">Read the textbook →</a>
+    <a class="btnx" href="start-here.qmd">Start here</a>
+    <a class="btnx" href="blog/index.qmd">Explore writing</a>
+    <a class="btnx" href="work.qmd">Work with me</a>
+  </div>
 </div>
+```
 
 ::: {.columns}
 ::: {.column width="33%"}
@@ -46,6 +47,7 @@ title: "Causalica"
 :::
 
 ## What makes Causalica different
+
 ::: {.columns}
 ::: {.column width="50%"}
 <div class="cardx">
@@ -56,6 +58,7 @@ title: "Causalica"
   </p>
 </div>
 :::
+
 ::: {.column width="50%"}
 <div class="cardx">
   <h3>Reproducible by default</h3>
@@ -73,6 +76,7 @@ title: "Causalica"
 - [A short reading list](blog/reading-list.qmd)
 
 ## Credibility
+
 <div class="cardx">
   <p class="muted">
     I’m <strong>Amare Teklay</strong> — economist + software developer working on complex systems, applied causal methods,
