@@ -1,0 +1,12 @@
+---
+title: "A short reading list"
+date: 2026-02-05
+---
+
+A small set of references I return to frequently:
+
+- Causal inference fundamentals (potential outcomes, DAGs)
+- Study design and robustness
+- Decision-making under uncertainty
+
+(Links and notes coming soon.)

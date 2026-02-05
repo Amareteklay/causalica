@@ -1,0 +1,9 @@
+---
+title: "Start here"
+---
+
+If you're new:
+
+1) Read the textbook entry point: https://textbook.causalica.com  
+2) Skim the writing page for practical notes  
+3) Use the principles page to understand how I evaluate evidence

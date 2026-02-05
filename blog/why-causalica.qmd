@@ -1,0 +1,11 @@
+---
+title: "Why Causalica"
+date: 2026-02-05
+---
+
+Most real problems aren’t “predict X” — they’re “what happens if we do Y?”
+
+Causalica is where I collect:
+- simple explanations that stay honest about assumptions
+- practical workflows that you can reuse
+- notes on decision-making under uncertainty

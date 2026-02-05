@@ -2,4 +2,27 @@
 title: "Work"
 ---
 
-What you offer (research, consulting, tools), plus a contact method.
+I help researchers and teams move from **question → design → implementation → decision**.
+
+## Typical engagements
+### Causal strategy
+- Define the causal question, estimand, and identification strategy
+- DAG review + assumptions audit
+- Sensitivity analysis plan (what could break the conclusion?)
+
+### Research engineering
+- Reproducible pipelines (data → features → models → report)
+- Versioned outputs + clean project structure
+- Lightweight dashboards for exploration (e.g., Streamlit)
+
+### Model review
+- Check leakage, overfitting, and evaluation design
+- Interpretability and robustness checks
+- “Is this decision justified?” style review
+
+## What I don’t do
+- Black-box modeling without a decision context
+- Overconfident claims when assumptions are weak
+
+## Contact
+Email: **you@domain.com** (replace)

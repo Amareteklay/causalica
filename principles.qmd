@@ -1,0 +1,14 @@
+---
+title: "Principles"
+---
+
+## How I approach claims
+- **Make assumptions explicit.** If a conclusion depends on an assumption, it should be visible.
+- **Prefer designs over algorithms.** Strong identification beats fancy models.
+- **Show sensitivity.** If small changes flip results, that’s a result.
+- **Reproducibility by default.** Clean structure, pinned dependencies, and runnable outputs.
+
+## What “trustworthy” means here
+- Clear scope: what a method can and cannot answer
+- Sources when factual claims matter
+- Honest uncertainty when evidence is thin

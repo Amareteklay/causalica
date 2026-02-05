@@ -2,9 +2,21 @@
 title: "Causalica"
 ---
 
-## Causal inference for real decisions
+::: {.callout-note}
+### Causal inference for real decisions
+Living textbook, practical notes, and research engineering.
+:::
 
-I build research-grade causal workflows, write a living textbook, and publish practical notes.
+## Start here
+- **Read the textbook:** https://textbook.causalica.com  
+- **Writing:** Short, rigorous notes on causal thinking and decision-making  
+- **Work:** Research support, modeling strategy, and implementation
 
-- **Textbook:** https://textbook.causalica.com
-- **Writing:** see the *Writing* tab
+## What you’ll find
+- Clear explanations (no fluff)
+- Reproducible workflows
+- Examples you can reuse
+
+## Credibility
+- Author: **Amare Teklay**
+- Focus: causal inference, complex systems, decision science

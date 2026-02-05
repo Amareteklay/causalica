@@ -1,0 +1,12 @@
+---
+title: "How I frame causal questions"
+date: 2026-02-05
+---
+
+A useful causal question has:
+- an intervention (what changes?)
+- an outcome (what matters?)
+- a population + time window (for whom, when?)
+- a counterfactual comparison (versus what?)
+
+If any part is vague, the analysis will be too.

@@ -15,18 +15,31 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: start-here.qmd
+        text: Start here
       - href: about.qmd
         text: About
       - href: work.qmd
         text: Work
+      - href: principles.qmd
+        text: Principles
       - href: blog/index.qmd
         text: Writing
       - href: https://textbook.causalica.com
         text: Textbook
+  page-footer:
+    left: "© 2026 Causalica"
+    right:
+      - text: "Textbook"
+        href: https://textbook.causalica.com
+      - text: "GitHub"
+        href: https://github.com/amareteklay
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - styles/theme.scss
     toc: true
     css:
       - styles/site.css
