@@ -10,12 +10,13 @@ title: "Causalica"
     workflows you can ship.
   </p>
 
-  <div class="cta-row">
-    <a class="btnx primary" href="https://textbook.causalica.com">Read the textbook →</a>
-    <a class="btnx" href="start-here.qmd">Start here</a>
-    <a class="btnx" href="blog/index.qmd">Explore writing</a>
-    <a class="btnx" href="work.qmd">Work with me</a>
-  </div>
+  ::: {.cta-row}
+[Read the textbook →](https://textbook.causalica.com){.btn .btn-primary .btn-lg}
+[Start here](start-here.qmd){.btn .btn-outline-light .btn-lg}
+[Explore writing](blog/index.qmd){.btn .btn-outline-light .btn-lg}
+[Work with me](work.qmd){.btn .btn-outline-light .btn-lg}
+:::
+
 </div>
 
 ::: {.columns}
