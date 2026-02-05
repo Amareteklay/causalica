@@ -1,0 +1,10 @@
+---
+title: "Causalica"
+---
+
+## Causal inference for real decisions
+
+I build research-grade causal workflows, write a living textbook, and publish practical notes.
+
+- **Textbook:** https://textbook.causalica.com
+- **Writing:** see the *Writing* tab

@@ -1,0 +1,5 @@
+---
+title: "About"
+---
+
+A short bio, what you work on, and what Causalica is for.

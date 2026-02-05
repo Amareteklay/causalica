@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "blog/**/*.qmd"
+    - "!**/drafts/**"
+    - "!**/README.md"
+
+website:
+  title: "Causalica"
+  favicon: assets/images/logo.svg
+  navbar:
+    logo: assets/images/logo.svg
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: work.qmd
+        text: Work
+      - href: blog/index.qmd
+        text: Writing
+      - href: https://textbook.causalica.com
+        text: Textbook
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    css:
+      - styles/site.css
