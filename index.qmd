@@ -4,19 +4,44 @@ title: "Causalica"
 
 ::: {.callout-note}
 ### Causal inference for real decisions
-Living textbook, practical notes, and research engineering.
+A practical home for causal thinking, decision-making, and research engineering.
 :::
 
 ## Start here
-- **Read the textbook:** https://textbook.causalica.com  
-- **Writing:** Short, rigorous notes on causal thinking and decision-making  
-- **Work:** Research support, modeling strategy, and implementation
+::: {.columns}
+::: {.column width="50%"}
+### Learn
+- **Textbook:** https://textbook.causalica.com  
+- Foundations, examples, and living notes
+
+### Read
+- Short notes and essays you can apply  
+- Methods, pitfalls, and decision frames
+:::
+
+::: {.column width="50%"}
+### Build
+- Reproducible analysis pipelines  
+- Clean project structure and automation
+
+### Collaborate
+- Causal strategy + robustness checks  
+- Research engineering support
+:::
+:::
 
 ## What you’ll find
-- Clear explanations (no fluff)
-- Reproducible workflows
-- Examples you can reuse
+- **Clear explanations** with assumptions made explicit  
+- **Reproducible workflows** (not just narratives)  
+- **Decision-first framing**: what changes, for whom, compared to what?
+
+## Latest
+- [Why Causalica](blog/why-causalica.qmd)
+- [How I frame causal questions](blog/causal-questions.qmd)
+- [A short reading list](blog/reading-list.qmd)
 
 ## Credibility
-- Author: **Amare Teklay**
-- Focus: causal inference, complex systems, decision science
+I’m **Amare Teklay** — economist + software developer working on complex social-ecological systems and applied causal methods.
+
+- Emphasis: identification, robustness, and decision usefulness  
+- See: [Principles](principles.qmd) • [Work](work.qmd) • [About](about.qmd)
