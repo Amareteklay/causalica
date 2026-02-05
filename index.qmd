@@ -2,46 +2,82 @@
 title: "Causalica"
 ---
 
-::: {.callout-note}
-### Causal inference for real decisions
-A practical home for causal thinking, decision-making, and research engineering.
+<div class="hero">
+  <div class="kicker">Causal inference • decision science • research engineering</div>
+  <h1 class="title">Causal inference for real decisions</h1>
+  <p class="subtitle">
+    A modern home for rigorous causal thinking—methods you can trust, explanations you can reuse, and
+    workflows you can ship.
+  </p>
+
+  <div class="cta-row">
+    <a class="btnx primary" href="https://textbook.causalica.com">Read the textbook →</a>
+    <a class="btnx" href="start-here.qmd">Start here</a>
+    <a class="btnx" href="blog/index.qmd">Explore writing</a>
+    <a class="btnx" href="work.qmd">Work with me</a>
+  </div>
+</div>
+
+::: {.columns}
+::: {.column width="33%"}
+<div class="cardx">
+  <h3>Textbook</h3>
+  <p class="muted">A living Quarto book with foundations, examples, and notes that grow over time.</p>
+  <p><a href="https://textbook.causalica.com">Go to textbook →</a></p>
+</div>
 :::
 
-## Start here
+::: {.column width="33%"}
+<div class="cardx">
+  <h3>Writing</h3>
+  <p class="muted">Short, rigorous pieces on identification, robustness, and decision-making under uncertainty.</p>
+  <p><a href="blog/index.qmd">Go to writing →</a></p>
+</div>
+:::
+
+::: {.column width="33%"}
+<div class="cardx">
+  <h3>Work</h3>
+  <p class="muted">Causal strategy, design review, reproducible pipelines, and research engineering support.</p>
+  <p><a href="work.qmd">See offerings →</a></p>
+</div>
+:::
+:::
+
+## What makes Causalica different
 ::: {.columns}
 ::: {.column width="50%"}
-### Learn
-- **Textbook:** https://textbook.causalica.com  
-- Foundations, examples, and living notes
-
-### Read
-- Short notes and essays you can apply  
-- Methods, pitfalls, and decision frames
+<div class="cardx">
+  <h3>Design-first, not algorithm-first</h3>
+  <p class="muted">
+    Strong identification beats fancy models. I focus on assumptions, estimands, and robustness—
+    then pick methods that match the decision.
+  </p>
+</div>
 :::
-
 ::: {.column width="50%"}
-### Build
-- Reproducible analysis pipelines  
-- Clean project structure and automation
-
-### Collaborate
-- Causal strategy + robustness checks  
-- Research engineering support
+<div class="cardx">
+  <h3>Reproducible by default</h3>
+  <p class="muted">
+    Clean structure, versioned outputs, and workflows you can run again. No “mystery notebooks”
+    that can’t be reproduced a month later.
+  </p>
+</div>
 :::
 :::
 
-## What you’ll find
-- **Clear explanations** with assumptions made explicit  
-- **Reproducible workflows** (not just narratives)  
-- **Decision-first framing**: what changes, for whom, compared to what?
-
-## Latest
+## Latest writing
 - [Why Causalica](blog/why-causalica.qmd)
 - [How I frame causal questions](blog/causal-questions.qmd)
 - [A short reading list](blog/reading-list.qmd)
 
 ## Credibility
-I’m **Amare Teklay** — economist + software developer working on complex social-ecological systems and applied causal methods.
-
-- Emphasis: identification, robustness, and decision usefulness  
-- See: [Principles](principles.qmd) • [Work](work.qmd) • [About](about.qmd)
+<div class="cardx">
+  <p class="muted">
+    I’m <strong>Amare Teklay</strong> — economist + software developer working on complex systems, applied causal methods,
+    and research engineering.
+  </p>
+  <p class="muted2">
+    See: <a href="principles.qmd">Principles</a> • <a href="about.qmd">About</a> • <a href="work.qmd">Work</a>
+  </p>
+</div>

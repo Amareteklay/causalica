@@ -1,7 +1,11 @@
 ---
 title: "Writing"
+listing:
+  contents: "."
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+  page-size: 12
 ---
 
-- [Why Causalica](why-causalica.qmd)
-- [How I frame causal questions](causal-questions.qmd)
-- [A short reading list](reading-list.qmd)
+Notes and essays on causal inference, decision-making, and research engineering.

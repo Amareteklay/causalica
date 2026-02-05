@@ -1,15 +1,141 @@
 /*-- scss:defaults --*/
+/* Typography */
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-$headings-font-weight: 700;
-$body-color: #111;
+$headings-font-weight: 800;
+
+/* Base palette */
+$body-bg: #070B14;
+$body-color: #EAF0FF;
+$link-color: #7DD3FC;
 $link-decoration: none;
 
+/* Navbar + UI */
+$navbar-bg: #0B1220;
+$navbar-dark-color: #EAF0FF;
+$navbar-dark-hover-color: #7DD3FC;
+
+$code-bg: rgba(255, 255, 255, 0.06);
+$code-color: #EAF0FF;
+
 /*-- scss:rules --*/
-body { letter-spacing: 0.1px; }
+:root {
+  --c-surface: rgba(255,255,255,0.06);
+  --c-surface-2: rgba(255,255,255,0.09);
+  --c-border: rgba(255,255,255,0.12);
+  --c-border-2: rgba(255,255,255,0.18);
+  --c-muted: rgba(234,240,255,0.72);
+  --c-muted-2: rgba(234,240,255,0.58);
+  --c-accent: #7DD3FC;
+  --c-accent-2: #A78BFA;
+  --c-accent-3: #34D399;
+}
 
-h1, h2, h3 { letter-spacing: -0.2px; }
+body {
+  letter-spacing: 0.15px;
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(125,211,252,0.18), transparent 60%),
+    radial-gradient(900px 500px at 85% 15%, rgba(167,139,250,0.16), transparent 60%),
+    radial-gradient(1000px 700px at 50% 90%, rgba(52,211,153,0.10), transparent 55%),
+    $body-bg;
+}
 
-.navbar { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+a:hover { opacity: 0.95; text-decoration: underline; text-underline-offset: 0.2em; }
+
+#quarto-content {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Better headings */
+h1, h2, h3 {
+  letter-spacing: -0.35px;
+}
+h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); }
+h2 { margin-top: 2.25rem; }
+
+/* Glass cards */
+.cardx {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 18px;
+  padding: 1.1rem 1.1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.cardx:hover {
+  border-color: var(--c-border-2);
+  transform: translateY(-2px);
+  transition: 160ms ease;
+}
+.muted { color: var(--c-muted); }
+.muted2 { color: var(--c-muted-2); }
+
+/* Hero */
+.hero {
+  padding: 2.4rem 0 1.2rem 0;
+}
+.hero .kicker {
+  color: var(--c-muted);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.hero .title {
+  margin: 0.35rem 0 0.5rem 0;
+}
+.hero .subtitle {
+  font-size: 1.15rem;
+  color: var(--c-muted);
+  max-width: 70ch;
+}
+.hero .cta-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+}
+
+.btnx {
+  display: inline-block;
+  padding: 0.65rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+  color: $body-color;
+  font-weight: 700;
+}
+.btnx:hover { border-color: var(--c-border-2); text-decoration: none; }
+.btnx.primary {
+  border-color: rgba(125,211,252,0.55);
+  background: linear-gradient(135deg, rgba(125,211,252,0.18), rgba(167,139,250,0.14));
+}
+
+/* Callouts better on dark */
+.callout {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-left-width: 5px;
+  border-radius: 18px;
+}
+.callout-note { border-left-color: rgba(125,211,252,0.9); }
+.callout-important { border-left-color: rgba(167,139,250,0.9); }
+.callout-tip { border-left-color: rgba(52,211,153,0.9); }
+
+/* Footer */
+.page-footer {
+  color: var(--c-muted-2);
+}
+
+/* Make Quarto navbar logo fit */
 .navbar-brand img { height: 36px; }
 
-#quarto-content { max-width: 960px; margin: 0 auto; }
+/* Reduce harsh table styling */
+table {
+  background: transparent;
+}
+thead th {
+  border-bottom: 1px solid var(--c-border);
+}
+tbody td {
+  border-top: 1px solid var(--c-border);
+}

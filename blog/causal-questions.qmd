@@ -1,12 +1,128 @@
 ---
 title: "How I frame causal questions"
 date: 2026-02-05
+description: "A simple checklist for turning vague research questions into answerable causal questions: intervention, outcome, population, time, and counterfactual."
 ---
 
-A useful causal question has:
-- an intervention (what changes?)
-- an outcome (what matters?)
-- a population + time window (for whom, when?)
-- a counterfactual comparison (versus what?)
+A vague question produces vague evidence.
 
-If any part is vague, the analysis will be too.
+The easiest way to improve a causal analysis is often to improve the **question**.
+
+Here is the framing I use when I want a causal question that is actually answerable.
+
+## The five-part causal question
+
+A well-formed causal question usually specifies:
+
+1) **Intervention**: what is being changed?
+2) **Outcome**: what is being measured?
+3) **Population**: for whom?
+4) **Time window**: when do we expect effects?
+5) **Counterfactual**: compared to what?
+
+Let’s walk through each part.
+
+### 1) Intervention: what changes?
+
+Not “exposure” in the abstract — a *change you could imagine implementing*.
+
+Bad:
+- “Does education affect income?”
+
+Better:
+- “What is the effect of completing secondary school (vs not completing) on income?”
+
+Even better:
+- “What is the effect of a policy that increases secondary school completion by X% on income at age 30?”
+
+You don’t always need the last level of detail, but you do need something that implies a real comparison.
+
+### 2) Outcome: what exactly is measured?
+
+Outcomes are often underspecified.
+
+Bad:
+- “Does the program reduce poverty?”
+
+Better:
+- “Does the program reduce the probability of being below the poverty line?”
+
+Even better:
+- “Does the program reduce the probability of being below the poverty line **12 months after enrollment**?”
+
+Also ask: is the outcome measured consistently, and does measurement itself change after the intervention?
+
+### 3) Population: for whom?
+
+Effects are not universal constants.
+
+Bad:
+- “Does remote work increase productivity?”
+
+Better:
+- “Among software developers in mid-sized firms, does remote work increase measured output?”
+
+Sometimes the biggest difference between studies is not methods — it’s population.
+
+### 4) Time window: when do we expect effects?
+
+Effects vary over time. Many arguments silently assume “immediate and permanent.” That’s rarely true.
+
+Ask:
+- What is the short-run effect?
+- What is the long-run effect?
+- Are there adaptation dynamics?
+
+In policy settings, time is a major confounder: trends, shocks, and seasonality can look like treatment effects.
+
+### 5) Counterfactual: compared to what?
+
+This is the heart of causal inference.
+
+Every causal estimate is a comparison between:
+- what happened under the intervention
+- what would have happened without it
+
+So you must define the “without it.”
+
+Examples:
+- no policy change
+- alternative policy
+- delayed adoption
+- business-as-usual care
+
+A surprising number of disagreements are really disagreements about counterfactuals.
+
+## The “estimand sentence”
+
+When I want to be precise, I write a one-sentence estimand:
+
+> “Among **[population]**, what is the effect of **[intervention]** versus **[comparison]** on **[outcome]** measured over **[time window]**?”
+
+If you can’t write this sentence, your study design will likely be unstable.
+
+## A worked example
+
+Vague:
+- “Do nutrition protocols improve ICU outcomes?”
+
+Framed:
+> “Among adult ICU patients, what is the effect of implementing an early enteral nutrition protocol (vs standard practice) on 28-day mortality and ICU length of stay, measured during the admission and up to 28 days after ICU entry?”
+
+Now you can design:
+- what counts as protocol exposure
+- what comparison is fair
+- what timing matters
+- what confounding is plausible
+
+## Why this matters
+
+Framing does three things immediately:
+
+1) It forces you to be honest about what you can claim.
+2) It tells you what data you need.
+3) It makes your identification strategy easier to evaluate.
+
+The fastest way to improve your causal inference is to treat question framing as a first-class step, not a formality.
+
+If you want, send me a question you’re working on and I’ll rewrite it into a well-formed causal question plus 2–3 plausible counterfactuals.

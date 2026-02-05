@@ -9,25 +9,32 @@ project:
 
 website:
   title: "Causalica"
+  site-url: https://causalica.com
   favicon: assets/images/logo.svg
+
   navbar:
     logo: assets/images/logo.svg
-    left:
-      - href: index.qmd
-        text: Home
+    background: "#0B1220"
+    foreground: "#EAF0FF"
+    pinned: true
+    right:
       - href: start-here.qmd
         text: Start here
-      - href: about.qmd
-        text: About
+      - href: textbook.qmd
+        text: Textbook
+      - href: blog/index.qmd
+        text: Writing
       - href: work.qmd
         text: Work
       - href: principles.qmd
         text: Principles
-      - href: blog/index.qmd
-        text: Writing
-      - href: https://textbook.causalica.com
-        text: Textbook
+      - href: about.qmd
+        text: About
+      - icon: github
+        href: https://github.com/amareteklay
+
   page-footer:
+    border: true
     left: "© 2026 Causalica"
     right:
       - text: "Textbook"
@@ -41,5 +48,7 @@ format:
       - cosmo
       - styles/theme.scss
     toc: true
-    css:
-      - styles/site.css
+    smooth-scroll: true
+    link-external-newwindow: true
+    include-in-header:
+      - includes/head.html
