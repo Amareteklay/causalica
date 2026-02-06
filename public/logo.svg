@@ -17,10 +17,9 @@
        A 350 350 0 1 0 770 780"
     fill="none"
     stroke="url(#baseGradient)"
-    stroke-width="150"
+    stroke-width="300"
     stroke-linecap="round"
     stroke-linejoin="round"
-    vector-effect="non-scaling-stroke"
     shape-rendering="geometricPrecision"
   />
 
@@ -29,46 +28,42 @@
        A 350 350 0 1 0 710 820"
     fill="none"
     stroke="url(#accentGradient)"
-    stroke-width="20"
+    stroke-width="100"
     stroke-linecap="round"
     stroke-linejoin="round"
-    vector-effect="non-scaling-stroke"
     shape-rendering="geometricPrecision"
   />
 
 <circle 
     cx="210" 
     cy="512" 
-    r="30" 
+    r="60" 
     fill="url(#baseGradient)" 
     stroke="url(#accentGradient)" 
-    stroke-width="10" 
+    stroke-width="50" 
     stroke-linecap="round" 
     stroke-linejoin="round" 
-    vector-effect="non-scaling-stroke" 
     shape-rendering="geometricPrecision" />
 
     <circle 
     cx="760" 
     cy="220" 
-    r="30" 
+    r="60" 
     fill="url(#baseGradient)" 
     stroke="url(#accentGradient)" 
-    stroke-width="10" 
+    stroke-width="50" 
     stroke-linecap="round" 
     stroke-linejoin="round" 
-    vector-effect="non-scaling-stroke" 
     shape-rendering="geometricPrecision" />
 
     <circle 
     cx="740" 
-    cy="800" 
-    r="30" 
+    cy="790" 
+    r="60" 
     fill="url(#baseGradient)" 
     stroke="url(#accentGradient)" 
-    stroke-width="10" 
+    stroke-width="50" 
     stroke-linecap="round" 
     stroke-linejoin="round" 
-    vector-effect="non-scaling-stroke" 
     shape-rendering="geometricPrecision" />
 </svg>
