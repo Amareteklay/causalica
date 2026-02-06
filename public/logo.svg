@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Letter C">
   <!-- Simple geometric “C” made from a 270° arc with rounded ends -->
-  <path
+
+<path
     d="M 752.4 271.6
-       A 340 340 0 1 0 752.4 752.4
-       L 810 900
-       L 125 900
-       L 125 125
-       L 810 125
-       Z"
+       A 340 340 0 1 0 752.4 752.4"
     fill="none"
     stroke="#0B2A63"
-    stroke-width="50"
-    stroke-linecap="round"
+    stroke-width="120"
+    
     stroke-linejoin="round"
   />
+
+  
+<rect 
+x="645"
+y="245"
+width="130" 
+height="150" 
+stroke="#BFE238"
+stroke-width="50"
+stroke-linejoin="round"
+fill="none" 
+/>
+
+
+ <rect 
+x="642"
+y="632"
+width="130" 
+height="150" 
+stroke="#8FB718"
+stroke-width="50"
+stroke-linejoin="round"
+fill="none" 
+/>
 </svg>
