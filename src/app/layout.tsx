@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Inter, Source_Serif_4 } from "next/font/google";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +24,10 @@ export const metadata: Metadata = {
   },
   description: "Practical causal inference — a modern hub for learning and applying causal thinking.",
   metadataBase: new URL("https://causalica.com"),
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Causalica",
     description: "Practical causal inference — a modern hub for learning and applying causal thinking.",
@@ -31,6 +36,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   robots: { index: true, follow: true },
+};
+export const viewport: Viewport = {
+  themeColor: "#0f172a",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

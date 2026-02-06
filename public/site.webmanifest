@@ -1,0 +1,10 @@
+{
+  "name": "Causalica",
+  "short_name": "Causalica",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "theme_color": "#0f172a",
+  "background_color": "#fcfcfb",
+  "display": "standalone"
+}
