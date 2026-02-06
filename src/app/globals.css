@@ -1,40 +1,42 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   /* Surfaces */
-  --paper: 255 255 255;       /* main background */
-  --mist: 246 248 251;        /* subtle section tint */
+  --paper: 252 252 251;     /* warm white */
+  --mist: 245 247 250;      /* subtle tint */
   --card: 255 255 255;
 
   /* Text */
-  --ink: 11 18 32;            /* near-black navy */
-  --muted: 71 85 105;         /* slate-600-ish */
+  --ink: 9 14 26;           /* near-black navy */
+  --muted: 71 85 105;       /* slate-ish */
 
   /* Lines */
-  --border: 226 232 240;      /* slate-200-ish */
+  --border: 226 232 240;    /* slate-200 */
 
   /* Brand accent (teal) */
-  --accent: 20 184 166;       /* teal-500 */
-  --accent-strong: 13 148 136;/* teal-600 */
-
-  /* Shadows */
-  --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 6px 20px rgba(15,23,42,0.06);
+  --accent: 20 184 166;     /* teal-500 */
+  --accent-strong: 13 148 136; /* teal-600 */
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  color: rgb(var(--ink));
   background: rgb(var(--paper));
-}
-
-/* Better text rendering */
-* {
+  color: rgb(var(--ink));
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Nicer default selection */
+::selection {
+  background: rgba(20, 184, 166, 0.20);
+}
+
+/* Make anchors feel premium */
+a {
+  text-underline-offset: 4px;
 }

@@ -9,15 +9,15 @@ function cx(...classes: Array<string | false | undefined | null>) {
 }
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition " +
+  "focus:outline-none focus-visible:ring-2 focus-visible:ring-ink/60 focus-visible:ring-offset-2 " +
+  "disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-ink text-white shadow-soft hover:translate-y-[-1px] hover:shadow-md active:translate-y-0",
-  secondary:
-    "border border-border bg-card text-ink hover:bg-mist",
-  ghost:
-    "text-ink/80 hover:bg-mist",
+primary:
+    "bg-slate-900 text-white shadow-soft hover:translate-y-[-1px] hover:shadow-md active:translate-y-0",
+  secondary: "border border-border bg-card text-ink hover:bg-mist",
+  ghost: "text-ink/80 hover:bg-mist",
 };
 
 const sizes: Record<Size, string> = {
@@ -49,10 +49,6 @@ export function ButtonLink({
   size?: Size;
 }) {
   return (
-    <Link
-      href={href}
-      className={cx(base, variants[variant], sizes[size], className)}
-      {...props}
-    />
+    <Link href={href} className={cx(base, variants[variant], sizes[size], className)} {...props} />
   );
 }

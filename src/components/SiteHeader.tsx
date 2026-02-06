@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
+
 
 const nav = [
   { href: "/start", label: "Start here" },
@@ -19,7 +21,6 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
@@ -29,16 +30,21 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-paper/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-slate-900 text-white">
-            C
-          </span>
-          <span>Causalica</span>
+        <Link href="/" className="flex items-center gap-3 font-semibold tracking-tight">
+          <Image
+            src="/logo.svg"
+            alt="Causalica"
+            width={34}
+            height={34}
+            priority
+            className="shrink-0"
+          />
+          <span className="tracking-tight">Causalica</span>
         </Link>
 
-        {/* Desktop nav */}
+        {/* Desktop */}
         <nav className="hidden items-center gap-1 md:flex">
           {nav.map((item) => (
             <Link
@@ -47,8 +53,8 @@ export function SiteHeader() {
               className={cx(
                 "rounded-xl px-3 py-2 text-sm font-medium transition",
                 isActive(item.href)
-                  ? "bg-slate-100 text-slate-900"
-                  : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                  ? "bg-mist text-ink"
+                  : "text-muted hover:bg-mist hover:text-ink"
               )}
             >
               {item.label}
@@ -57,17 +63,17 @@ export function SiteHeader() {
 
           <a
             href="https://textbook.causalica.com"
-            className="ml-2 rounded-xl bg-slate-900 px-3 py-2 text-sm font-medium text-white hover:bg-slate-800"
+            className="ml-2 rounded-xl bg-slate-900 px-3 py-2 text-sm font-medium text-white shadow-soft hover:translate-y-[-1px] hover:shadow-md active:translate-y-0"
           >
             Textbook
           </a>
         </nav>
 
-        {/* Mobile controls */}
+        {/* Mobile */}
         <div className="flex items-center gap-2 md:hidden">
           <a
             href="https://textbook.causalica.com"
-            className="rounded-xl border border-slate-200 px-3 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50"
+            className="rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink hover:bg-mist"
           >
             Textbook
           </a>
@@ -77,16 +83,15 @@ export function SiteHeader() {
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="rounded-xl border border-slate-200 px-3 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50"
+            className="rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink hover:bg-mist"
           >
             {open ? "Close" : "Menu"}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu panel */}
       {open && (
-        <div className="md:hidden border-t border-slate-200 bg-white">
+        <div className="md:hidden border-t border-border bg-paper">
           <nav className="mx-auto max-w-6xl px-6 py-3">
             <div className="flex flex-col gap-1">
               {nav.map((item) => (
@@ -96,8 +101,8 @@ export function SiteHeader() {
                   className={cx(
                     "rounded-xl px-3 py-2 text-sm font-medium transition",
                     isActive(item.href)
-                      ? "bg-slate-100 text-slate-900"
-                      : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                      ? "bg-mist text-ink"
+                      : "text-muted hover:bg-mist hover:text-ink"
                   )}
                 >
                   {item.label}

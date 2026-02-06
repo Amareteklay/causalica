@@ -2,67 +2,58 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-slate-200">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+    <footer className="border-t border-border bg-paper">
+      <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="space-y-2">
-            <div className="text-sm font-semibold">Causalica</div>
-            <p className="text-sm text-slate-600">
+          <div className="space-y-3">
+            <div className="text-sm font-semibold tracking-tight">Causalica</div>
+            <p className="text-sm text-muted">
               Practical causal inference — a modern hub for learning and applying causal thinking.
             </p>
           </div>
 
           <div className="space-y-2 text-sm">
-            <div className="font-semibold">Explore</div>
+            <div className="font-semibold tracking-tight">Explore</div>
             <div className="flex flex-col gap-1">
-              <Link className="text-slate-600 hover:text-slate-900" href="/start">
+              <Link className="text-muted hover:text-ink underline decoration-transparent hover:decoration-border" href="/start">
                 Start here
               </Link>
-              <Link className="text-slate-600 hover:text-slate-900" href="/tools">
+              <Link className="text-muted hover:text-ink underline decoration-transparent hover:decoration-border" href="/tools">
                 Tools
               </Link>
-              <Link className="text-slate-600 hover:text-slate-900" href="/about">
+              <Link className="text-muted hover:text-ink underline decoration-transparent hover:decoration-border" href="/about">
                 About
               </Link>
-            </div>
-          </div>
-
-          <div className="space-y-2 text-sm">
-            <div className="font-semibold">Textbook</div>
-            <div className="flex flex-col gap-1">
-              <a className="text-slate-600 hover:text-slate-900" href="https://textbook.causalica.com">
-                Go to textbook
-              </a>
-              <a className="text-slate-600 hover:text-slate-900" href="https://textbook.causalica.com">
-                Foundations
-              </a>
-              <a className="text-slate-600 hover:text-slate-900" href="https://textbook.causalica.com">
-                Applied methods
-              </a>
-            </div>
-          </div>
-
-          <div className="space-y-2 text-sm">
-            <div className="font-semibold">Contact</div>
-            <div className="flex flex-col gap-1">
-              <Link className="text-slate-600 hover:text-slate-900" href="/contact">
-                Contact page
+              <Link className="text-muted hover:text-ink underline decoration-transparent hover:decoration-border" href="/contact">
+                Contact
               </Link>
-              {/* Add real links later */}
-              <a className="text-slate-600 hover:text-slate-900" href="#">
-                GitHub (soon)
+            </div>
+          </div>
+
+          <div className="space-y-2 text-sm">
+            <div className="font-semibold tracking-tight">Textbook</div>
+            <div className="flex flex-col gap-1">
+              <a className="text-muted hover:text-ink underline decoration-transparent hover:decoration-border" href="https://textbook.causalica.com">
+                Open textbook
               </a>
             </div>
+          </div>
+
+          <div className="space-y-2 text-sm">
+            <div className="font-semibold tracking-tight">Status</div>
+            <p className="text-muted">
+              Building in public. Shipping site + tooling milestones alongside the textbook.
+            </p>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Causalica</div>
           <div className="flex gap-4">
-            <Link className="hover:text-slate-700" href="/about">
+            <Link className="hover:text-ink underline decoration-transparent hover:decoration-border" href="/about">
               About
             </Link>
-            <Link className="hover:text-slate-700" href="/contact">
+            <Link className="hover:text-ink underline decoration-transparent hover:decoration-border" href="/contact">
               Contact
             </Link>
           </div>

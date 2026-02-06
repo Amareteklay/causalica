@@ -2,6 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Inter, Source_Serif_4 } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const serif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -12,8 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://causalica.com"),
   openGraph: {
     title: "Causalica",
-    description:
-      "Practical causal inference — a modern hub for learning and applying causal thinking.",
+    description: "Practical causal inference — a modern hub for learning and applying causal thinking.",
     url: "https://causalica.com",
     siteName: "Causalica",
     type: "website",
@@ -21,14 +33,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-slate-900 antialiased">
+    <html lang="en" className={`${inter.variable} ${serif.variable}`}>
+      <body className="min-h-screen bg-paper text-ink antialiased">
         <SiteHeader />
         {children}
         <SiteFooter />

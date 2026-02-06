@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -19,7 +19,7 @@ const config: Config = {
         "accent-strong": "rgb(var(--accent-strong))",
       },
       boxShadow: {
-        soft: "var(--shadow)",
+        soft: "0 1px 2px rgba(2, 6, 23, 0.05), 0 12px 30px rgba(2, 6, 23, 0.08)",
       },
     },
   },
