@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Call to action */}
-      <section className="border-t border-slate-200 bg-slate-50">
+      <section className="border-b border-border bg-gradient-to-b from-mist to-paper">
         <div className="mx-auto max-w-6xl px-6 py-14">
           <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-slate-200 bg-white p-8 md:flex-row md:items-center">
             <div className="space-y-1">
