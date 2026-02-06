@@ -1,54 +1,79 @@
+import { ButtonLink } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+
+const pillars = [
+  { title: "Foundations", desc: "Assumptions, causal graphs, identification, estimation." },
+  { title: "Applied workflows", desc: "DiD, IV, matching, synthetic controls, and more." },
+  { title: "Tooling", desc: "Templates, checklists, and sanity checks you’ll reuse." },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <div className="mx-auto max-w-5xl px-6 py-16">
-        <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm text-slate-600">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            Causalica
-          </div>
-
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-            Causal inference, made practical.
-          </h1>
-
-          <p className="max-w-2xl text-lg text-slate-600">
-            Notes, tools, and explanations for modern causal reasoning — from fundamentals to applied workflows.
-          </p>
-
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://textbook.causalica.com"
-              className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
-            >
-              Read the textbook
-            </a>
-            <a
-              href="/about"
-              className="rounded-xl border px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50"
-            >
-              About Causalica
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          {[
-            { title: "Foundations", desc: "Core concepts, assumptions, and causal graphs." },
-            { title: "Applied workflows", desc: "DiD, IV, matching, synthetic controls, and more." },
-            { title: "Tooling", desc: "Reusable templates, code patterns, and sanity checks." },
-          ].map((c) => (
-            <div key={c.title} className="rounded-2xl border p-6 shadow-sm">
-              <h2 className="text-lg font-semibold">{c.title}</h2>
-              <p className="mt-2 text-sm text-slate-600">{c.desc}</p>
+    <main>
+      {/* Hero */}
+      <section className="border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-600">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              A professional home for causal inference
             </div>
-          ))}
-        </div>
 
-        <footer className="mt-20 border-t pt-8 text-sm text-slate-500">
-          © {new Date().getFullYear()} Causalica
-        </footer>
-      </div>
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
+              Causal inference, made practical.
+            </h1>
+
+            <p className="text-lg text-slate-600 sm:text-xl">
+              Causalica is a modern hub for learning and applying causal thinking — with a
+              textbook, tools, and workflows that keep you honest.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink href="https://textbook.causalica.com" variant="primary" size="lg">
+                Read the textbook
+              </ButtonLink>
+              <ButtonLink href="/start" variant="secondary" size="lg">
+                Start here
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillars */}
+      <section>
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="grid gap-6 md:grid-cols-3">
+            {pillars.map((p) => (
+              <Card key={p.title}>
+                <CardHeader>
+                  <CardTitle>{p.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-slate-600">{p.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to action */}
+      <section className="border-t border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-slate-200 bg-white p-8 md:flex-row md:items-center">
+            <div className="space-y-1">
+              <h2 className="text-xl font-semibold tracking-tight">Follow the learning path</h2>
+              <p className="text-sm text-slate-600">
+                A structured way to go from intuition → identification → implementation.
+              </p>
+            </div>
+            <ButtonLink href="/start" variant="primary">
+              Go to Start here
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
