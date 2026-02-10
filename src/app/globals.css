@@ -2,20 +2,42 @@
 
 :root {
   /* Surfaces */
-  --paper: 252 252 251;     /* warm white */
-  --mist: 245 247 250;      /* subtle tint */
+  --paper: 252 252 251;
+  --mist: 245 247 250;
   --card: 255 255 255;
 
   /* Text */
-  --ink: 9 14 26;           /* near-black navy */
-  --muted: 71 85 105;       /* slate-ish */
+  --ink: 9 14 26;
+  --muted: 71 85 105;
 
   /* Lines */
-  --border: 226 232 240;    /* slate-200 */
+  --border: 226 232 240;
 
-  /* Brand accent (teal) */
-  --accent: 20 184 166;     /* teal-500 */
-  --accent-strong: 13 148 136; /* teal-600 */
+  /* =========================
+     CAUSALICA BRAND PALETTE
+     Primary: Teal/Green
+     Secondary: Purple
+     Alt: Navy
+  ========================= */
+
+  /* Primary (Teal/Green) */
+  --brand: 15 118 110;          /* #0F766E */
+  --brand-strong: 13 148 136;   /* #0D9488 */
+  --brand-soft: 167 243 208;    /* #A7F3D0 */
+
+  /* Secondary (Purple) */
+  --brand-2: 124 58 237;        /* #7C3AED */
+  --brand-2-strong: 109 40 217; /* #6D28D9 */
+  --brand-2-soft: 221 214 254;  /* #DDD6FE */
+
+  /* Alt (Navy / monochrome) */
+  --brand-dark: 15 23 42;        /* #0F172A */
+  --brand-dark-strong: 2 6 23;   /* #020617 */
+  --brand-dark-soft: 226 232 240;/* #E2E8F0 */
+
+  /* Backwards-compatible alias */
+  --accent: var(--brand);
+  --accent-strong: var(--brand-strong);
 }
 
 html,
@@ -31,12 +53,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Nicer default selection */
 ::selection {
-  background: rgba(20, 184, 166, 0.20);
+  background: rgb(var(--brand) / 0.25);
 }
 
-/* Make anchors feel premium */
 a {
   text-underline-offset: 4px;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--brand) / 0.85);
+  outline-offset: 2px;
 }

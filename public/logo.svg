@@ -1,69 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Causalica letter C">
-  <!-- Optimized: same geometry, cleaner rendering + intentional two-world palette -->
-  <!-- Back layer (reality / baseline) -->
-  <defs>
-    <linearGradient id="baseGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#051A40" />
-      <stop offset="100%" stop-color="#051A40" />
-    </linearGradient>
-    <linearGradient id="accentGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#B8DB57" />
-      <stop offset="100%" stop-color="#B8DB57" />
-    </linearGradient>
-  </defs>
-  <path
-    d="M 780 240
-       A 350 350 0 1 0 770 780"
-    fill="none"
-    stroke="url(#baseGradient)"
-    stroke-width="300"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    shape-rendering="geometricPrecision"
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="deeperRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#EA580C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+  </linearGradient>
+  <linearGradient id="deeperBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0284C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+  </linearGradient>
+  <linearGradient id="causalicaOcean" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#1D4ED8;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1"/>
+  </linearGradient>
+   <linearGradient id="causalicaTealMint" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#0F766E;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#34D399;stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="causalicaIndigoViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#4338CA;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="causalicaCharcoal" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" style="stop-color:#111827;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#0B1220;stop-opacity:1"/>
+  </linearGradient>
+</defs>
+<!-- Dark teal background - centered and sized for favicon -->
+  <rect 
+    x="20"
+    y="17"
+    width="64" 
+    height="66" 
+    fill="url(#causalicaTealMint)"
+    rx="5"
   />
-
-<path
-    d="M 760 220
-       A 350 350 0 1 0 710 820"
-    fill="none"
-    stroke="url(#accentGradient)"
-    stroke-width="100"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    shape-rendering="geometricPrecision"
+  
+  <!-- Yellow/lime chevron arrow - simplified and bold for small sizes -->
+  <path 
+    d="M 80 20 
+       L 30 20 
+       L 20 32 
+       L 20 70 
+       L 30 80 
+       L 80 80
+       L 70 69
+       L 35 69 
+       L 35 33 
+       L 70 31
+       Z" 
+    fill="white" 
+    stroke-linejoin="round" 
   />
-
-<circle 
-    cx="210" 
-    cy="512" 
-    r="60" 
-    fill="url(#baseGradient)" 
-    stroke="url(#accentGradient)" 
-    stroke-width="50" 
-    stroke-linecap="round" 
-    stroke-linejoin="round" 
-    shape-rendering="geometricPrecision" />
-
-    <circle 
-    cx="760" 
-    cy="220" 
-    r="60" 
-    fill="url(#baseGradient)" 
-    stroke="url(#accentGradient)" 
-    stroke-width="50" 
-    stroke-linecap="round" 
-    stroke-linejoin="round" 
-    shape-rendering="geometricPrecision" />
-
-    <circle 
-    cx="740" 
-    cy="790" 
-    r="60" 
-    fill="url(#baseGradient)" 
-    stroke="url(#accentGradient)" 
-    stroke-width="50" 
-    stroke-linecap="round" 
-    stroke-linejoin="round" 
-    shape-rendering="geometricPrecision" />
 </svg>
+

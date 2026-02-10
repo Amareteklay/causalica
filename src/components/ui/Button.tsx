@@ -10,14 +10,14 @@ function cx(...classes: Array<string | false | undefined | null>) {
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition " +
-  "focus:outline-none focus-visible:ring-2 focus-visible:ring-ink/60 focus-visible:ring-offset-2 " +
+  "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-2 focus-visible:ring-offset-paper " +
   "disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
-primary:
-    "bg-slate-900 text-white shadow-soft hover:translate-y-[-1px] hover:shadow-md active:translate-y-0",
-  secondary: "border border-border bg-card text-ink hover:bg-mist",
-  ghost: "text-ink/80 hover:bg-mist",
+  primary:
+    "bg-[rgb(var(--brand))] text-white shadow-soft hover:bg-[rgb(var(--brand-strong))] hover:translate-y-[-1px] hover:shadow-md active:translate-y-0",
+  secondary: "border border-border bg-card text-ink hover:bg-brand/5",
+  ghost: "text-ink/80 hover:bg-brand/8",
 };
 
 const sizes: Record<Size, string> = {

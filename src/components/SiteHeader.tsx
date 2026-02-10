@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 
-
 const nav = [
   { href: "/start", label: "Start here" },
   { href: "/tools", label: "Tools" },
@@ -21,12 +20,11 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  useEffect(() => setOpen(false), [pathname]);
 
   const isActive = useMemo(() => {
-    return (href: string) => pathname === href || (href !== "/" && pathname?.startsWith(href + "/"));
+    return (href: string) =>
+      pathname === href || (href !== "/" && pathname?.startsWith(href + "/"));
   }, [pathname]);
 
   return (
@@ -36,34 +34,41 @@ export function SiteHeader() {
           <Image
             src="/logo.svg"
             alt="Causalica"
-            width={34}
-            height={34}
+            width={60}
+            height={60}
             priority
             className="shrink-0"
           />
-          <span className="tracking-tight">Causalica</span>
+          <span className="tracking-tight text-brandDark">Causalica</span>
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden items-center gap-1 md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cx(
-                "rounded-xl px-3 py-2 text-sm font-medium transition",
-                isActive(item.href)
-                  ? "bg-mist text-ink"
-                  : "text-muted hover:bg-mist hover:text-ink"
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-2 md:flex">
+          {nav.map((item) => {
+            const active = isActive(item.href);
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={cx(
+                  "relative rounded-xl px-3 py-2 text-sm font-medium transition-colors",
+                  "text-muted hover:text-ink",
+                  active ? "bg-brand/12" : "hover:bg-brand/8",
+                  "after:absolute after:left-3 after:right-3 after:-bottom-[2px] after:h-[3px] after:rounded-full after:bg-brand after:content-['']",
+                  "after:origin-left after:transition-transform after:duration-200",
+                  active ? "after:scale-x-100 text-ink" : "after:scale-x-0 hover:after:scale-x-100"
+                )}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
 
           <a
             href="https://textbook.causalica.com"
-            className="ml-2 rounded-xl bg-slate-900 px-3 py-2 text-sm font-medium text-white shadow-soft hover:translate-y-[-1px] hover:shadow-md active:translate-y-0"
+            className="ml-2 rounded-xl bg-[rgb(var(--brand))] px-3 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-[rgb(var(--brand-strong))] hover:translate-y-[-1px] hover:shadow-md active:translate-y-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--brand))]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
           >
             Textbook
           </a>
@@ -71,19 +76,16 @@ export function SiteHeader() {
 
         {/* Mobile */}
         <div className="flex items-center gap-2 md:hidden">
-          <a
-            href="https://textbook.causalica.com"
-            className="rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink hover:bg-mist"
-          >
-            Textbook
-          </a>
-
           <button
             type="button"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink hover:bg-mist"
+            className={cx(
+              "rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium text-ink transition",
+              "hover:bg-brand/6 hover:border-brand/25",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+            )}
           >
             {open ? "Close" : "Menu"}
           </button>
@@ -91,23 +93,34 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-paper">
+        <div className="border-t border-border bg-paper md:hidden">
           <nav className="mx-auto max-w-6xl px-6 py-3">
             <div className="flex flex-col gap-1">
-              {nav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cx(
-                    "rounded-xl px-3 py-2 text-sm font-medium transition",
-                    isActive(item.href)
-                      ? "bg-mist text-ink"
-                      : "text-muted hover:bg-mist hover:text-ink"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {/* Textbook now collapses with the menu */}
+              <a
+                href="https://textbook.causalica.com"
+                className="rounded-xl bg-[rgb(var(--brand))] px-3 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-[rgb(var(--brand-strong))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--brand))]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+              >
+                Textbook
+              </a>
+
+              {nav.map((item) => {
+                const active = isActive(item.href);
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={cx(
+                      "rounded-xl px-3 py-2 text-sm font-medium transition-colors",
+                      active ? "bg-brand/12 text-ink" : "text-muted hover:bg-brand/8 hover:text-ink"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
           </nav>
         </div>
