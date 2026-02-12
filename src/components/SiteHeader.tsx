@@ -32,32 +32,31 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         {/* Brand */}
         <Link
-  href="/"
-  className="group flex items-center gap-4"
-  aria-label="Causalica home"
->
-  <Image
-    src="/logo.svg"
-    alt=""
-    width={36}
-    height={36}
-    priority
-    className="shrink-0 relative -top-[1px]"
-  />
+          href="/"
+          className="group flex items-center gap-4"
+          aria-label="Causalica home"
+        >
+          <Image
+            src="/logo.svg"
+            alt=""
+            width={36}
+            height={36}
+            priority
+            className="shrink-0 relative -top-[1px]"
+          />
 
-  <span
-    className="
-      text-lg md:text-xl
-      font-extrabold
-      tracking-[-0.02em]
-      leading-none
-      bg-clip-text text-transparent
-      bg-gradient-to-b from-[rgb(var(--brand-strong))] to-[rgb(var(--brand))]
-    "
-  >
-    Causalica
-  </span>
-</Link>
+          <span
+            className={cx(
+              "text-lg md:text-xl",
+              "font-extrabold",
+              "tracking-[-0.02em] leading-none",
+              "text-ink"
+            )}
+          >
+            Causalica
+          </span>
+
+        </Link>
         {/* Desktop */}
         <nav className="hidden items-center gap-2 md:flex" aria-label="Primary">
           {nav.map((item) => {
