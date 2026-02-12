@@ -50,7 +50,8 @@ export function SiteHeader() {
               "text-lg md:text-xl",
               "font-extrabold",
               "tracking-[-0.02em] leading-none",
-              "text-ink"
+              "bg-clip-text text-transparent",
+              "bg-gradient-to-b from-[rgb(var(--brand-strong))] to-[rgb(var(--brand))]"
             )}
           >
             Causalica
