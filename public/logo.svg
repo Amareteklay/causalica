@@ -1,57 +1,46 @@
 <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <linearGradient id="deeperRed" x1="0%" y1="0%" x2="0%" y2="100%">
+  <defs>
+    <!-- Brand gradient for the C -->
+    <linearGradient id="deeperRed" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#EA580C;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
-  </linearGradient>
-  <linearGradient id="deeperBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0284C7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
-  </linearGradient>
-  <linearGradient id="causalicaOcean" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#1D4ED8;stop-opacity:1"/>
-    <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1"/>
-  </linearGradient>
-   <linearGradient id="causalicaTealMint" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#0F766E;stop-opacity:1"/>
-    <stop offset="100%" style="stop-color:#34D399;stop-opacity:1"/>
-  </linearGradient>
-  <linearGradient id="causalicaIndigoViolet" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#4338CA;stop-opacity:1"/>
-    <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1"/>
-  </linearGradient>
-  <linearGradient id="causalicaCharcoal" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" style="stop-color:#111827;stop-opacity:1"/>
-    <stop offset="100%" style="stop-color:#0B1220;stop-opacity:1"/>
-  </linearGradient>
-</defs>
-<!-- Dark teal background - centered and sized for favicon -->
-  <rect 
-    x="20"
-    y="17"
-    width="64" 
-    height="66" 
-    fill="url(#causalicaTealMint)"
-    rx="5"
-  />
-  
-  <!-- Yellow/lime chevron arrow - simplified and bold for small sizes -->
-  <path 
-    d="M 80 20 
-       L 30 20 
-       L 20 32 
-       L 20 70 
-       L 30 80 
-       L 80 80
-       L 70 69
-       L 35 69 
-       L 35 33 
-       L 70 31
-       Z" 
-    fill="white" 
-    stroke-linejoin="round" 
-  />
-</svg>
+    </linearGradient>
 
+    <!-- Use a slightly separated tone for the causal graph (same hue family, better contrast) -->
+    <linearGradient id="graphRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#B91C1C;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C2410C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C2410C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- C / chevron mark -->
+  <path
+    d="M 100 25
+       L 25 0
+       L 0 25
+       L 0 75
+       L 25 100
+       L 100 75
+       L 25 75
+       L 25 25
+       Z"
+    fill="url(#deeperRed)"
+    stroke-linejoin="round"
+  />
+
+  <!-- Causal graph: thicker strokes + larger nodes for small-size legibility -->
+  <g stroke="url(#graphRed)" stroke-width="2" stroke-linecap="round" fill="url(#graphRed)">
+    <!-- center/cause node -->
+    <circle cx="30" cy="50" r="2.6" />
+
+    <!-- edges -->
+    <line x1="30" y1="50" x2="74" y2="30" />
+    <line x1="30" y1="50" x2="74" y2="70" />
+
+    <!-- outcome nodes (pulled slightly inward to avoid kissing the outer shape) -->
+    <circle cx="74" cy="30" r="2.6" />
+    <circle cx="74" cy="70" r="2.6" />
+  </g>
+</svg>
